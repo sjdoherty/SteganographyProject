@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Steganography</title>
+
+    <script src="js/steganography.js"></script>
+</head>
+<body>
+    <style>
+        .en_dec_img{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+    <nav>
+        <li><a href="index.html">Encode</a></li>
+        <li><a href="decode.html">Decode</a></li>
+    </nav>
+
+    <label>Choose File: </label>
+    <input type="file" id="src_img" accept="image/*" onchange="readUrl(this, 'read_img')"/>
+
+<!--    <input type="text" id="text" />-->
+
+
+    <img src="" class="en_dec_img" id="read_img" alt="" hidden /><br />
+
+
+    <label for="referee_name">Referee Name: </label><input type="text" id="referee_name" /><br />
+    <label for="competition">Competition: </label><input type="text" id="competition" /><br />
+    <label for="grade">Grade: </label><input type="text" id="grade" /><br />
+    <label for="venue">Venue: </label><input type="text" id="venue" /><br />
+    <label for="date">Date: </label><input type="date" id="date" /><br />
+    <label for="time">Time: </label><input type="time" id="time" /><br />
+    <label for="yellow_card">Cards: </label><input type="text" id="yellow_card" /><br />
+    <label for="notes">Notes: </label><textarea id="notes" ></textarea> <br />
+
+    <button onclick="hideText()"> Encode </button>
+
+    <br /><label id="encoded_label" hidden>Encoded Image</label><br />
+    <img src="" class="en_dec_img" id="encoded_img" alt="" hidden /><br />
+
+    <script src="js/script.js" type="application/javascript"></script>
+</body>
+</html>

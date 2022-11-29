@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="js/steganography.js"></script>
+</head>
+<body>
+    <style>
+        .en_dec_img{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    <nav>
+        <li><a href="index.html">Encode</a></li>
+        <li><a href="decode.html">Decode</a></li>
+    </nav>
+    <input type="file" id="decode_img" accept="image/*" onchange="readUrl(this, 'decoded_img')" /> <!-- onchange="decode(this)" -->
+    <img src="" class="en_dec_img" id="decoded_img" alt="" hidden />
+
+    <button onclick="decode(document.getElementById('decode_img'))"> Decode </button>
+
+    <p id="report" hidden>
+        <label for="referee_name">Referee Name: </label><label id="referee_name"></label><br />
+        <label for="competition">Competition: </label><label id="competition"></label><br />
+        <label for="grade">Grade: </label><label id="grade"></label><br />
+        <label for="venue">Venue: </label><label id="venue"></label><br />
+        <label for="date">Date: </label><label id="date"></label><br />
+        <label for="time">Time: </label><label id="time"></label><br />
+        <label for="yellow_card">Cards: </label><label id="yellow_card"></label><br />
+        <label for="notes">Notes: </label><label id="notes"></label><br />
+    </p>
+
+    <script src="js/script.js" type="application/javascript"></script>
+</body>
+</html>
